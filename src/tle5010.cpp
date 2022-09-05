@@ -2,14 +2,13 @@
 
 tle5010::tle5010()
 {
-  atan2FuncInt = _atan2IntDefault;
 }
 
 double tle5010::readAngleRadians()
 {
   readXY();
 
-  return atan2Func(y, x);
+  return atan2(y, x);
 }
 
 double tle5010::readAngleDegrees()
@@ -21,7 +20,7 @@ int16_t tle5010::readInteger()
 {
   readXY();
   
-  return atan2FuncInt(y, x);
+  return atan2Int16(y, x);
 }
 
 tle5010_spi::tle5010_spi(uint8_t _cs)
@@ -29,9 +28,8 @@ tle5010_spi::tle5010_spi(uint8_t _cs)
   csBM = _cs;
 }
 
-void tle5010_spi::begin(atan2Function _atan2Func)
+void tle5010_spi::begin()
 {
-   atan2Func = _atan2Func;
    setCS(csBM);   
    SPI.begin();
 }
