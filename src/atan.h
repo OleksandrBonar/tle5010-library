@@ -26,8 +26,8 @@ int16_t atan2Int16(int16_t y, int16_t x)
         }
     }
 
-    if (fl ! =0) {
-		  z += fl * (1 << (16 - 1));
+    if (fl != 0) {
+        z += fl * (1 << (16 - 1));
     }
 
     return z;
