@@ -12,7 +12,6 @@ class tle5010
     int16_t y;
     tle5010();
     virtual void readXY() {};
-    atan2Function atan2Func;
     atan2FunctionInteger atan2FuncInt;
     double readAngleRadians();
     double readAngleDegrees();
@@ -28,7 +27,7 @@ class tle5010_spi: public tle5010
     uint8_t  csIBM;
   public:
     tle5010_spi(uint8_t _cs);
-    void begin(atan2Function _atan2Func=_atan2default);
+    void begin();
     void readXY();
     void setCS(uint8_t _cs);
 };
