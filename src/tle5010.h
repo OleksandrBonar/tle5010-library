@@ -3,7 +3,6 @@
 
 #include <Arduino.h>
 #include <SPI.h>
-#include <atan.h>
 
 // Base class
 class tle5010
