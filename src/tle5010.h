@@ -11,7 +11,7 @@ class tle5010
     int16_t x;
     int16_t y;
     tle5010();
-    virtual void readXY(){};
+    virtual void readXY() {};
     atan2Function atan2Func;
     atan2FunctionInteger atan2FuncInt;
     double readAngleRadians();
