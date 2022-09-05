@@ -3,6 +3,7 @@
 
 #include <Arduino.h>
 #include <SPI.h>
+#include <atan.h>
 
 // Base class
 class tle5010
@@ -12,7 +13,6 @@ class tle5010
     int16_t y;
     tle5010();
     virtual void readXY() {};
-    atan2FunctionInteger atan2FuncInt;
     double readAngleRadians();
     double readAngleDegrees();
     int16_t readInteger();
