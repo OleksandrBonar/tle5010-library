@@ -1,4 +1,5 @@
 #include <tle5010.h>
+#include <atan.h>
 
 tle5010::tle5010()
 {
